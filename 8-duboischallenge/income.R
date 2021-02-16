@@ -4,7 +4,6 @@
 ## 2020-02-16
 
 # Packages ####
-library(patchwork)
 library(ggplot2)
 library(gt)
 library(tidyr)
@@ -12,9 +11,6 @@ library(scales)
 library(ggnewscale)
 library(grid)
 library(gridExtra)
-library(pBrackets)
-library(ggpubr)
-
 # Import Fonts
 library(extrafont)
 library(showtext)
@@ -33,28 +29,8 @@ dollar <- function (x) {number_format(
 avrg <- dollar(income$`Actual Average`)
 
 income$`Actual Average` <- avrg
-
-# Left hand Table ####
   
-(table <- gt(income[, 1:2]) %>%
-  tab_options(
-    table_body.hlines.color = "black",
-    table_body.vlines.color = "black",
-    table_body.border.bottom.color = "black",
-    table.font.names = "Tomorrow-Light",
-    table.background.color = "#f2dfce",
-    column_labels.text_transform = "uppercase",
-    column_labels.border.bottom.color = "black",
-    column_labels.border.top.color = "black",
-    column_labels.border.bottom.width = "0.5",
-    column_labels.font.size = 10,
-    data_row.padding = 25,
-    stub.border.color = "black"
-    ))
-  
-# Top Table ####
-
-# Main Graph ####
+# Main Plot ####
 income2 <- income %>%
   pivot_longer(names(income[3:7]),
                names_to = "category",
@@ -174,8 +150,3 @@ annotate("text", x = 1, y = 3, label = "WELL\nTO-DO.", colour = "black", size = 
 
 plot1
 
-(table + plot1)
-
-# Dollar Image ####
-
-# Title ####
