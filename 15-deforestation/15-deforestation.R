@@ -137,6 +137,8 @@ p2 <- ggplot(total, aes(x = year, y = sum, group = 1)) +
     plot.caption = element_text(color = "grey80")
   )
 
-(p1)/p2
+plot <- (p1)/p2
 
+ggsave(filename = "deforestation.png", plot = plot, 
+       width = 28, height = 24, unit = "cm")
 
