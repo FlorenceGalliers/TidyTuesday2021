@@ -107,7 +107,7 @@ p1 <- ggplot(b2,
         legend.text = element_text(color = "grey80"),
         strip.text = element_text(color = "white",
                                   size = 10),
-        plot.title = element_markdown(size = 16, color = "white", face = "bold",
+        plot.title = element_markdown(size = 20, color = "white", face = "bold",
                                       hjust = 0.5),
         plot.subtitle = element_text(size = 10, hjust = 0.5, color = "grey80"))
 
