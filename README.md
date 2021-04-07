@@ -2,6 +2,9 @@
 
 This repository contains my contributions to TidyTuesday Data Visualisations 2021
 
+- [Week 15](./15-deforestation): Deforestation in Brazil. Using waffle plot and the {pathwork} package. Visualising the direct drivers of deforestation in Brazil.
+![Deforestation](./15-deforestation/deforestation.png)
+
 
 - [Week 8](./8-duboischallenge): DuBois Challenge, recreated data visualisations with modern techniques in celebration of W.E.B. DuBois. I completed Challenge 05: Income and Expenditure of 150 Negro Families in Atlanta, GA, USA
 
